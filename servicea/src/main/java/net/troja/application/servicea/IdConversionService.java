@@ -7,7 +7,7 @@ import java.util.UUID;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ConversionService {
+public class IdConversionService {
     private static final BigInteger TWO_COMPL_REF = BigInteger.ONE.shiftLeft(64);
     private static final BigInteger NUM85 = BigInteger.valueOf(85);
     private final String alphabet = "0123456789" + "abcdefghijklmnopqrstuvwxyz" + "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "!#$%&()[]{}*+-._/@~|,;:";

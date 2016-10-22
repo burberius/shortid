@@ -7,9 +7,9 @@ import java.util.UUID;
 
 import org.junit.Test;
 
-public class ConversionServiceTest {
+public class IdConversionServiceTest {
     private static final String ALL_FF = "0o,[_+2WS@";
-    private final ConversionService classToTest = new ConversionService();
+    private final IdConversionService classToTest = new IdConversionService();
 
     @Test
     public void convert() {

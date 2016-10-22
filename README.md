@@ -25,3 +25,32 @@ usable figures from position 33 to 126, that means one can choose his "alphabet"
 different figures.
 
 As this is the only safe way, this project chooses solution 2.
+
+## Implementation details
+* The services are just rudimentary, only create and retrieve is implemented!
+* Create uses a POST to return the result with the uuid/uniqueId.
+* Logging is neglected
+* The service B is used to store a hash of the aggregation data, as example metadata. When retrieved, 
+this hash is checked, difference result in an error response.
+* The create method of service A is not transactional!
+
+## Build, run and test
+To build everything run:
+```bash
+mvn clean package
+```
+
+Then start service A by executing in one shell:
+```bash
+java -jar servicea/target/servicea.jar
+```
+
+Then start service B by executing in another shell:
+```bash
+java -jar serviceb/target/serviceb.jar
+```
+
+When both services are up, you can test them with executing the script:
+```bash
+./test.sh
+```

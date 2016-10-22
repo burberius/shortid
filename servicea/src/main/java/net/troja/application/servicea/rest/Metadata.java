@@ -1,20 +1,6 @@
-package net.troja.application.serviceb.model;
+package net.troja.application.servicea.rest;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-@Entity
 public class Metadata {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @JsonIgnore
-    private long id;
-    @Column(unique = true, nullable = false)
     private String uniqueId;
     private String content;
 
@@ -26,14 +12,6 @@ public class Metadata {
         super();
         this.uniqueId = uniqueId;
         this.content = content;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(final long id) {
-        this.id = id;
     }
 
     public String getUniqueId() {
